@@ -1,9 +1,9 @@
-FROM node:10-alpine 
+FROM docker.frogfather.sas.jfrog.internal/node:10-alpine 
  
 LABEL maintainer="yannc@jfrog.com"
 
-ARG ARTY_URL="http://192.168.41.41:8081/artifactory"
-ARG REGISTRY_URL="http://192.168.41.41:8081/artifactory/api/npm/npm-prod/"
+ARG ARTY_URL="http://frogfather.sas.jfrog.internal/artifactory"
+ARG REGISTRY_URL="http://frogfather.sas.jfrog.internal/artifactory/api/npm/npm/"
 ARG BUILD_NUM
 ARG APP_VERS
 
