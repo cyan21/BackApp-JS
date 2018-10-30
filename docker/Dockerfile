@@ -25,7 +25,7 @@ RUN jfrog rt c arty --interactive=false --url=$ARTY_URL --user=admin --password=
 RUN npm config set registry $REGISTRY_URL
 
 #RUN npm install 
-RUN jfrog rt npmi npm-prod --build-name=back-app --build-number=$BUILD_NUM
+RUN jfrog rt npmi npm --build-name=back-app --build-number=$BUILD_NUM
 
 RUN tar -czvf back-app.$APP_VERS.tar.gz public app.js  
 RUN jfrog rt u back-app.$APP_VERS.tar.gz generic-local/super-front-app/ --build-name=backk-app --build-number=$BUILD_NUM
